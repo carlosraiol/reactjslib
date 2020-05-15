@@ -1,30 +1,11 @@
-import React from "react";
-
-const buttonA = <button>Histórico dos Clientes</button>
-
-const buttonB = <button>Cadastrar Cliente</button>
+import React from 'react';
+import Button from './Button';
 
 const hasCustomer = true
 
 const App = () => {
 
-    const renderShowHistory = () => (
-        <div>
-            Clique no botão para visualizar o histórico dos clientes
-            <br />
-            {buttonA}
-        </div>
-    )
-
-    const renderAndCustomer = () => (
-        <div>
-            Clique no botão para cadastrar o cliente
-            <br />
-            {buttonB}
-        </div>
-    )
-
-    const customer = "Carlos Raiol"
+    const customer = 'Carlos Raiol'
 
     const showCustomer = () => {
 
@@ -32,17 +13,18 @@ const App = () => {
         
         return (
             <div>
-                <h1>Nome do Cliente: {customer}</h1>
+                <h3>Nome do Cliente: {customer}</h3>
             </div>
         )
 
     }
 
     return (
-        <div>
-            <p>Digital Innovation One</p>
-            <p>Bem-vindo a nossa aula :)</p>
-            {hasCustomer ? renderShowHistory() : renderAndCustomer()}
+        <div className='container-fluid'>
+            <h2>Cloud Services</h2>
+            <h3>Cadastro de Clientes</h3>
+            <hr />
+            {hasCustomer ? Button.historyCustomer() : Button.addCustomer()}
             <div>{showCustomer()}</div>
         </div>
     );

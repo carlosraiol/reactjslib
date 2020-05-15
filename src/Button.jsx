@@ -1,12 +1,39 @@
 import React from 'react'
 
-function Button(props) {
+const btnHistoryCustomer = <button className='btn btn-primary'>Histórico dos Clientes</button>
+const btnAddCustomer = <button className='btn btn-success'>Cadastrar Cliente</button>
 
-    const { name, onClick } = props
+const historyCustomer = () => {
+
+    const renderShowHistory = () => (
+        <div>
+            Clique no botão para visualizar o histórico dos clientes
+            <br />
+            {btnHistoryCustomer}
+        </div>
+    )
 
     return (
-        <button onClick={onClick}>{name}</button>
+        renderShowHistory()
     )
 }
 
-export default Button
+const addCustomer = () => {
+
+    const renderAddCustomer = () => (
+        <div>
+            Clique no botão para visualizar o histórico dos clientes
+            <br />
+            {btnAddCustomer}
+        </div>
+    )
+
+    return (
+        renderAddCustomer()
+    )
+}
+
+export default { 
+    historyCustomer, 
+    addCustomer 
+}
