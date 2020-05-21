@@ -5,6 +5,7 @@ const initialState = {
 }
 
 export function reducer(state = initialState, action) {
+    debugger
     switch(action.type) {
         case INCREMENT:
             return {
